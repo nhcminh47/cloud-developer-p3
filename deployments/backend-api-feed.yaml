@@ -16,7 +16,7 @@ spec:
     spec: 
       containers: 
         - name: api-feed
-          image: emb1605272/udagram-api-feed:v2
+          image: minhnhc/udagram-api-feed
           imagePullPolicy: Always          
           resources:
             requests:            
@@ -25,7 +25,7 @@ spec:
               cpu: 500m                      
           envFrom:
             - secretRef:
-                name: config-secret
+                name: env-secret
             - secretRef:
                 name: aws-secret
             - configMapRef:

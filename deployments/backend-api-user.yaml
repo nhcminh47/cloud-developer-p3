@@ -25,7 +25,9 @@ spec:
               cpu: 500m
           envFrom:
             - secretRef:
-                name: config-secret
+                name: env-secret
+            - secretRef:
+                name: aws-secret
             - configMapRef:
                 name: config-secret
           ports: 
